@@ -29,7 +29,7 @@ func main() {
 	// router
 	routes := router.NewRouter(bookController)
 
-	server := http.Server{Addr: "localhost:8888", Handler: routes}
+	server := http.Server{Addr: "0.0.0.0:8888", Handler: routes}
 	err := server.ListenAndServe()
 	helper.PanicIfError(err)
 
