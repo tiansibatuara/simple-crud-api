@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"simple-crud-api/helper"
-
+	_ "github.com/lib/pq"
 	"github.com/rs/zerolog/log"
 )
 

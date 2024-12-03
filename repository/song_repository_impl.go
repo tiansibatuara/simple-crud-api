@@ -79,7 +79,7 @@ func (s *SongRepositoryImpl) FindById(ctx context.Context, songId int) (model.So
 	helper.PanicIfError(err)
 	defer helper.CommitOrRollback(tx)
 
-	SQL := "SELECT id, name FROM BOOK where id = $1"
+	SQL := "SELECT id, name FROM SONG where id = $1"
 	result, errQuery := tx.QueryContext(ctx, SQL, songId)
 	helper.PanicIfError(errQuery)
 	defer result.Close()
