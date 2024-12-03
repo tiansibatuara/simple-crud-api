@@ -1,6 +1,6 @@
 package model
 
-type Book struct {
+type Song struct {
 	Id   int
 	Name string
 }
